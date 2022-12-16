@@ -103,6 +103,8 @@ external_stylesheets = ['https://codepen.io/chriddyp/pen/bWLwgP.css']
 # Create dash app
 app = Dash(__name__, external_stylesheets=external_stylesheets)
 
+server = app.server
+
 # Build dash app layout 
 app.layout = html.Div([
 
@@ -185,6 +187,8 @@ def updateRadarChart(year, player='Kevin Durant'):
                 Input(component_id='attribute', component_property='value') ])
 def updateBarGraph(team, attribute):
     return createBarGraph(team,attribute)
+
+
 
 #============================================================
 # Run App 
