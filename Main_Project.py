@@ -200,6 +200,7 @@ def updateBarGraph(team, attribute):
 #============================================================
 
 # Run app and display result inline in the notebook
-app.run_server(port=5437)
+if __name__ == '__main__':
+  app.run_server(host="0.0.0.0", debug=True, port=5437)
 
 

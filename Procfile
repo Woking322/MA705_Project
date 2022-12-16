@@ -1,2 +1,2 @@
 
-web: python Main_Project.py
+web: gunicorn Main_Project:server
