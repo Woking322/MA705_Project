@@ -23,7 +23,7 @@ nbaData = pd.read_excel("./nba_player_data.xlsx")
     #'nba_player_data.xlsx')
 
 teamDescription = nbaData.drop(columns=['TEAM_ID','PLAYER_ID'])
-teamDescription = teamDescription.groupby(['TEAM']).mean()
+#teamDescription = teamDescription.groupby(['TEAM']).mean()
 
 # players.drop(columns = ['RANK', 'EFF',' season_start_year'], inplace = True)
 # players['start_year'] = players['Year'].str[:4].astype(int)
@@ -59,6 +59,11 @@ def createRadarChart(player : str, year : int ):
         print([fieldGoalPercent, threePtrPercent, freeThrowPercent])
     except Exception as exception:
         print(f'Exception: {exception}')
+        fieldGoalPercent = 15
+        threePtrPercent = 15
+        freeThrowPercent = 15
+    except Warning as we:
+        print(f'Warning : {we}')
         fieldGoalPercent = 15
         threePtrPercent = 15
         freeThrowPercent = 15
