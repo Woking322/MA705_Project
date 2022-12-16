@@ -195,6 +195,6 @@ def updateBarGraph(team, attribute):
 #============================================================
 
 # Run app and display result inline in the notebook
-app.run_server()
+app.run_server(port=5437)
 
 
