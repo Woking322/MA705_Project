@@ -19,7 +19,7 @@ from dash.dependencies import Input, Output
 #============================================================
 
 DEBUG = True 
-nbaData = pd.read_excel("C:/Users/omark/OneDrive/Desktop/MA 705/Project/nba_player_data.xlsx")
+nbaData = pd.read_excel("./nba_player_data.xlsx")
     #'nba_player_data.xlsx')
 
 teamDescription = nbaData.drop(columns=['TEAM_ID','PLAYER_ID'])
